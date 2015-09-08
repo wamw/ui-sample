@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<div id="display">
+		<div class="container"></div>
+	</div>
+	<div id="navigation">
+		<ul>
+			<li><a href="#"><img src="http://placehold.it/350x150" alt="cat"></a></li>
+			<li><a href="#"><img src="http://placehold.it/350x150" alt="cat"></a></li>
+			<li><a href="#"><img src="http://placehold.it/350x150" alt="cat"></a></li>
+			<li><a href="#"><img src="http://placehold.it/350x150" alt="cat"></a></li>
+			<li><a href="#"><img src="http://placehold.it/350x150" alt="cat"></a></li>
+			<li><a href="#"><img src="http://placehold.it/350x150" alt="cat"></a></li>
+		</ul>
+	</div>
+	<script>
+		$(document).on('touchmove', function(event) {
+			event.preventDefault();
+		});
+		$('#navigation').on('touchmove', function(event) {
+			event.stopPropagation();
+		});
+		var resizeHandler;
+		$(window).on('resize', resizeHandler = function(event) {
+			var displayHeight = $(window).height() - $('#navigation').height();
+			$('#display').css({ height: displayHeight + 'px' });
+		});
+		$(function() {
+			resizeHandler();
+		});
+	</script>
+</body>
+</html>

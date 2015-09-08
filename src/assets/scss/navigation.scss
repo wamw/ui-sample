@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+$navigation-bg: #000;
+
+
+#navigation {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	height: 160px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#140c0c+0,1a1e2b+100 */
+	background: #140c0c; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #140c0c 0%, #1a1e2b 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#140c0c), color-stop(100%,#1a1e2b)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #140c0c 0%,#1a1e2b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #140c0c 0%,#1a1e2b 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #140c0c 0%,#1a1e2b 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #140c0c 0%,#1a1e2b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#140c0c', endColorstr='#1a1e2b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+	> ul {
+		margin: 0;
+		padding: 0 20px;
+		list-style: none;
+		overflow: hidden;
+
+		width: 3000px;
+		height: 100%;
+
+		> li {
+			height: 100%;
+			margin: 0 0 0 20px;
+			padding: 0;
+			list-style: none;
+			float: left;
+
+			&:first-child {
+				margin-left: 0px;
+			}
+
+			> a {
+				display: block;
+				height: 100%;
+				padding: 20px 10px;
+				> img {
+					width: auto;
+					height: 100%;
+					vertical-align: bottom;
+				}
+			}
+		}
+
+	}
+}
